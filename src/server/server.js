@@ -1,11 +1,9 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const fs = require('fs');
+// const fs = require('fs');
 
 const app = express();
 app.use(bodyParser.json());
-
-const port = 5000;
 
 let records = [
   {
@@ -46,4 +44,5 @@ app.post('/api/records', (req, res) => {
   res.send(newRecord);
 });
 
+const port = 5000;
 app.listen(port, () => console.log(`Server listening on port 5000`));
